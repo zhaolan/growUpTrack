@@ -15,12 +15,13 @@ struct BabyTrackView: View {
     }
     
     var babyBasicInfo: some View {
-        HStack {
+        let birthday = viewModel.baby.birthday.getFormattedDate(format: "MM月DD日")
+        return HStack {
             ZStack {
                 Circle().frame(width: 100, height: 100)
                 Text(viewModel.baby.name).foregroundColor(Color.white)
             }
-            Text("生日：\(viewModel.baby.birthday)")
+            Text("生日：\(birthday)")
         }
         
     }

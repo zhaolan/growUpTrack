@@ -23,6 +23,7 @@
 		4070EF96247FABBE009BDB8F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EF95247FABBE009BDB8F /* LoginView.swift */; };
 		4070EF9A247FC3B4009BDB8F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EF99247FC3B4009BDB8F /* LoginViewModel.swift */; };
 		4070EFA0247FCB45009BDB8F /* LabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EF9F247FCB45009BDB8F /* LabelTextField.swift */; };
+		4070EFA3247FF001009BDB8F /* Date+formate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EFA2247FF001009BDB8F /* Date+formate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		4070EF95247FABBE009BDB8F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4070EF99247FC3B4009BDB8F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4070EF9F247FCB45009BDB8F /* LabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTextField.swift; sourceTree = "<group>"; };
+		4070EFA2247FF001009BDB8F /* Date+formate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+formate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		40500788247E51F2007E84D3 /* growUpTrack */ = {
 			isa = PBXGroup;
 			children = (
+				4070EFA1247FEFE7009BDB8F /* extensions */,
 				405007BB247E52EB007E84D3 /* viewModel */,
 				405007BA247E52E3007E84D3 /* views */,
 				405007B9247E52A1007E84D3 /* models */,
@@ -211,6 +214,14 @@
 				4070EF9F247FCB45009BDB8F /* LabelTextField.swift */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		4070EFA1247FEFE7009BDB8F /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4070EFA2247FF001009BDB8F /* Date+formate.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4070EFA3247FF001009BDB8F /* Date+formate.swift in Sources */,
 				4070EF8D247F9E41009BDB8F /* CustomerButton.swift in Sources */,
 				4050078A247E51F2007E84D3 /* AppDelegate.swift in Sources */,
 				4070EF9A247FC3B4009BDB8F /* LoginViewModel.swift in Sources */,
