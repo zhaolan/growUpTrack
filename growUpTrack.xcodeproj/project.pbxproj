@@ -16,13 +16,13 @@
 		405007A1247E51F5007E84D3 /* growUpTrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405007A0247E51F5007E84D3 /* growUpTrackTests.swift */; };
 		405007AC247E51F5007E84D3 /* growUpTrackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405007AB247E51F5007E84D3 /* growUpTrackUITests.swift */; };
 		405007BE247E54DD007E84D3 /* Baby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405007BD247E54DD007E84D3 /* Baby.swift */; };
-		405007E5247E5F15007E84D3 /* SwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405007E4247E5F15007E84D3 /* SwiftData.swift */; };
 		405007E7247E66E5007E84D3 /* BabyTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405007E6247E66E5007E84D3 /* BabyTrack.swift */; };
 		405007E9247E6924007E84D3 /* BabyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405007E8247E6924007E84D3 /* BabyService.swift */; };
 		405007EB247E6A0D007E84D3 /* BabyTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405007EA247E6A0D007E84D3 /* BabyTrackView.swift */; };
-		4070EF85247F4FF2009BDB8F /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EF84247F4FF2009BDB8F /* DateFormatter.swift */; };
 		4070EF8D247F9E41009BDB8F /* CustomerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EF8C247F9E41009BDB8F /* CustomerButton.swift */; };
 		4070EF96247FABBE009BDB8F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EF95247FABBE009BDB8F /* LoginView.swift */; };
+		4070EF9A247FC3B4009BDB8F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EF99247FC3B4009BDB8F /* LoginViewModel.swift */; };
+		4070EFA0247FCB45009BDB8F /* LabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EF9F247FCB45009BDB8F /* LabelTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,13 +71,13 @@
 		405007AB247E51F5007E84D3 /* growUpTrackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = growUpTrackUITests.swift; sourceTree = "<group>"; };
 		405007AD247E51F5007E84D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		405007BD247E54DD007E84D3 /* Baby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baby.swift; sourceTree = "<group>"; };
-		405007E4247E5F15007E84D3 /* SwiftData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftData.swift; path = "../../../../../../Downloads/SwiftData-swift3/SwiftData.swift"; sourceTree = "<group>"; };
 		405007E6247E66E5007E84D3 /* BabyTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyTrack.swift; sourceTree = "<group>"; };
 		405007E8247E6924007E84D3 /* BabyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyService.swift; sourceTree = "<group>"; };
 		405007EA247E6A0D007E84D3 /* BabyTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyTrackView.swift; sourceTree = "<group>"; };
-		4070EF84247F4FF2009BDB8F /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		4070EF8C247F9E41009BDB8F /* CustomerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerButton.swift; sourceTree = "<group>"; };
 		4070EF95247FABBE009BDB8F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4070EF99247FC3B4009BDB8F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4070EF9F247FCB45009BDB8F /* LabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,9 +129,7 @@
 		40500788247E51F2007E84D3 /* growUpTrack */ = {
 			isa = PBXGroup;
 			children = (
-				405007BF247E568A007E84D3 /* helper */,
-				405007BC247E52F4007E84D3 /* repository */,
-				405007BB247E52EB007E84D3 /* services */,
+				405007BB247E52EB007E84D3 /* viewModel */,
 				405007BA247E52E3007E84D3 /* views */,
 				405007B9247E52A1007E84D3 /* models */,
 				40500789247E51F2007E84D3 /* AppDelegate.swift */,
@@ -184,33 +182,19 @@
 			isa = PBXGroup;
 			children = (
 				4070EF89247F96F8009BDB8F /* common */,
+				4070EF95247FABBE009BDB8F /* LoginView.swift */,
 				405007EA247E6A0D007E84D3 /* BabyTrackView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
 		};
-		405007BB247E52EB007E84D3 /* services */ = {
+		405007BB247E52EB007E84D3 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4070EF99247FC3B4009BDB8F /* LoginViewModel.swift */,
 				405007E8247E6924007E84D3 /* BabyService.swift */,
 			);
-			path = services;
-			sourceTree = "<group>";
-		};
-		405007BC247E52F4007E84D3 /* repository */ = {
-			isa = PBXGroup;
-			children = (
-				405007E4247E5F15007E84D3 /* SwiftData.swift */,
-			);
-			path = repository;
-			sourceTree = "<group>";
-		};
-		405007BF247E568A007E84D3 /* helper */ = {
-			isa = PBXGroup;
-			children = (
-				4070EF84247F4FF2009BDB8F /* DateFormatter.swift */,
-			);
-			path = helper;
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 		405007DB247E5C8B007E84D3 /* Frameworks */ = {
@@ -224,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				4070EF8C247F9E41009BDB8F /* CustomerButton.swift */,
-				4070EF95247FABBE009BDB8F /* LoginView.swift */,
+				4070EF9F247FCB45009BDB8F /* LabelTextField.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -361,13 +345,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4070EF85247F4FF2009BDB8F /* DateFormatter.swift in Sources */,
 				4070EF8D247F9E41009BDB8F /* CustomerButton.swift in Sources */,
 				4050078A247E51F2007E84D3 /* AppDelegate.swift in Sources */,
-				405007E5247E5F15007E84D3 /* SwiftData.swift in Sources */,
+				4070EF9A247FC3B4009BDB8F /* LoginViewModel.swift in Sources */,
 				4050078C247E51F2007E84D3 /* SceneDelegate.swift in Sources */,
 				4050078E247E51F2007E84D3 /* ContentView.swift in Sources */,
 				405007EB247E6A0D007E84D3 /* BabyTrackView.swift in Sources */,
+				4070EFA0247FCB45009BDB8F /* LabelTextField.swift in Sources */,
 				405007BE247E54DD007E84D3 /* Baby.swift in Sources */,
 				4070EF96247FABBE009BDB8F /* LoginView.swift in Sources */,
 				405007E9247E6924007E84D3 /* BabyService.swift in Sources */,
