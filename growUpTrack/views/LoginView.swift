@@ -9,7 +9,13 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var name: String = ""
+    
+    @ObservedObject
+    private var viewModel: LoginViewModel
+    
+    init(viewModel: LoginViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
          VStack {
@@ -19,13 +25,19 @@ struct LoginView: View {
                        .padding(.bottom, 100)
                    
                    VStack {
-                       TextField("宝宝昵称", text: $name)
+                       TextField("宝宝昵称", text: $viewModel.username)
                        Divider().frame(height: 1).padding(.horizontal, 30).background(Color.gray)
+                       Text(viewModel.errorMessage)
+                        .font(.caption)
+                        .foregroundColor(Color.red)
                    }
                    .padding(.vertical, 50)
+            
+    
                
-                   CustomerButton(buttonText: "登入", action: {print("go to the home page")})
-               }
+            CustomerButton(buttonText: "登入", action: {
+                self.viewModel.loginButtonWasPressed()
+            })}
                .padding()
                .foregroundColor(Color.orange)
                .background(
@@ -37,6 +49,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(viewModel: LoginViewModel())
     }
 }
