@@ -6,14 +6,15 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("宝宝成长轨迹")
-                .padding(.bottom, 200)
-                .font(.title)
+                .fontWeight(.bold)
+                .font(.largeTitle)
+                .padding(.bottom, 100)
             
             VStack {
                 TextField("宝宝昵称", text: $name)
                 Divider().frame(height: 1).padding(.horizontal, 30).background(Color.gray)
             }
-            .padding()
+            .padding(.vertical, 50)
         
             CustomerButton(buttonText: "登入", action: {print("go to the home page")})
         }
@@ -23,7 +24,7 @@ struct ContentView: View {
             Image("background")
                 .resizable()
                 .scaledToFill())
-        }    
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {
