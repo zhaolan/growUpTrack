@@ -21,6 +21,7 @@ struct CustomerButton: View {
                 Text(self.buttonText)
                     .fontWeight(.semibold)
                     .font(.title)
+                
             }
         }
         .buttonStyle(GradientBackgroundStyle(color: color, fontColor: fontColor))
