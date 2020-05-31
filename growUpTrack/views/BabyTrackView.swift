@@ -4,22 +4,28 @@ struct BabyTrackView: View {
     var viewModel: BabyService = BabyService()
     
     var body: some View {
-        VStack(alignment: .leading) {
-            babyBasicInfo
-            Divider().frame(height: 1).padding(.horizontal, 30).background(Color.gray)
-            
-            if (viewModel.baby.babyevents.isEmpty) {
-                Text("宝宝目前没有活动记录")
-            } else {
-                ScrollView() {
-                    ForEach(viewModel.baby.babyevents) { babyevent in
-                       BabyEventItemView(babyEvent: babyevent)
+        NavigationView {
+            VStack(alignment: .leading) {
+                babyBasicInfo
+                Divider().frame(height: 1).padding(.horizontal, 30).background(Color.gray)
+                if (viewModel.baby.babyevents.isEmpty) {
+                    Text("宝宝目前没有活动记录")
+                } else {
+                    ScrollView() {
+                        ForEach(viewModel.baby.babyevents) { babyevent in
+                            NavigationLink(destination: BabyEventDetailView(babyEvent: babyevent)){
+                                BabyEventItemView(babyEvent: babyevent)
+                            }
+                        }
                     }
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
                 }
             }
+            .padding()
+            .foregroundColor(Color.orange)
         }
-        .padding()
-        .foregroundColor(Color.orange)
+        
     }
     
     var babyBasicInfo: some View {
@@ -35,7 +41,6 @@ struct BabyTrackView: View {
                 .font(.system(size: 30, weight: .bold))
                 .frame(alignment: .topTrailing)
         }
-        
     }
 }
 
