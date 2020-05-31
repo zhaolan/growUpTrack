@@ -26,6 +26,7 @@
 		4070EFA3247FF001009BDB8F /* Date+formate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EFA2247FF001009BDB8F /* Date+formate.swift */; };
 		4070EFA5247FF2E3009BDB8F /* BabyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EFA4247FF2E3009BDB8F /* BabyEvent.swift */; };
 		4070EFA7247FF54A009BDB8F /* BabyEventItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EFA6247FF54A009BDB8F /* BabyEventItemView.swift */; };
+		4070EFA92483CFF8009BDB8F /* View+navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EFA82483CFF8009BDB8F /* View+navigate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		4070EFA2247FF001009BDB8F /* Date+formate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+formate.swift"; sourceTree = "<group>"; };
 		4070EFA4247FF2E3009BDB8F /* BabyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyEvent.swift; sourceTree = "<group>"; };
 		4070EFA6247FF54A009BDB8F /* BabyEventItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyEventItemView.swift; sourceTree = "<group>"; };
+		4070EFA82483CFF8009BDB8F /* View+navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+navigate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				4070EFA2247FF001009BDB8F /* Date+formate.swift */,
+				4070EFA82483CFF8009BDB8F /* View+navigate.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				4070EFA0247FCB45009BDB8F /* LabelTextField.swift in Sources */,
 				405007BE247E54DD007E84D3 /* Baby.swift in Sources */,
 				4070EF96247FABBE009BDB8F /* LoginView.swift in Sources */,
+				4070EFA92483CFF8009BDB8F /* View+navigate.swift in Sources */,
 				4070EFA5247FF2E3009BDB8F /* BabyEvent.swift in Sources */,
 				405007E9247E6924007E84D3 /* BabyService.swift in Sources */,
 				405007E7247E66E5007E84D3 /* BabyTrack.swift in Sources */,

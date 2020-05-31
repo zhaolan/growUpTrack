@@ -30,6 +30,7 @@ struct LoginView: View {
                    Image("background")
                        .resizable()
                        .scaledToFill())
+            .navigate(to: BabyTrackView(), when: $viewModel.isLoginSuccess)
     }
 }
 

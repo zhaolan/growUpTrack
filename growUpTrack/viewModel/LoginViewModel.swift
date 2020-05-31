@@ -1,17 +1,10 @@
-//
-//  LoginViewModel.swift
-//  growUpTrack
-//
-//  Created by ZhaoLan on 2020/5/28.
-//  Copyright © 2020 Lan. All rights reserved.
-//
-
 import SwiftUI
 import Combine
 
 class LoginViewModel: ObservableObject {
         
     @Published var username: String = ""
+    @Published var isLoginSuccess: Bool = false
     
     var errorMessage: String = ""
     
@@ -28,6 +21,7 @@ class LoginViewModel: ObservableObject {
         }
         else {
             errorMessage = ""
+            isLoginSuccess = true
             print("Succesfully logged in, navigate to next screen")
         }
         

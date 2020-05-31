@@ -31,6 +31,9 @@ struct BabyTrackView: View {
             }
             .frame(alignment: .topLeading)
             Text("生日：\(birthday)")
+            Image(systemName: "square.and.pencil")
+                .font(.system(size: 30, weight: .bold))
+                .frame(alignment: .topTrailing)
         }
         
     }
