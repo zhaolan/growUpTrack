@@ -29,7 +29,7 @@ struct BabyTrackView: View {
     }
     
     var babyBasicInfo: some View {
-        let birthday = viewModel.baby.birthday.getFormattedDate(format: "MM月DD日")
+        let birthday = viewModel.baby.birthday.getFormattedDate(format: "MM月dd日")
         return HStack {
             ZStack {
                 Circle().frame(width: 100, height: 100)

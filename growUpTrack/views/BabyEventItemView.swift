@@ -15,7 +15,7 @@ struct BabyEventItemView: View {
         VStack(alignment: .leading) {
             HStack {
                 Text(babyEvent.description)
-                Text(babyEvent.time.getFormattedDate(format: "YYYY-MM-D"))
+                Text(babyEvent.time.getFormattedDate(format: "YYYY-MM-dd"))
             }
             .frame(alignment: .topLeading)
             .padding()

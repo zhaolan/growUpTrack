@@ -14,7 +14,7 @@ struct BabyEventDetailView: View {
     var body: some View {
         VStack(alignment: .leading) {
           Text(babyEvent.description)
-          Text(babyEvent.time.getFormattedDate(format: "YYYY-MM-D"))
+          Text(babyEvent.time.getFormattedDate(format: "YYYY-MM-dd"))
       }
         .navigationBarTitle("成长轨迹详情", displayMode: .inline)
         .navigationBarHidden(false)
