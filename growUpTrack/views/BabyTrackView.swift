@@ -4,14 +4,17 @@ struct BabyTrackView: View {
     var viewModel: BabyService = BabyService()
     
     var body: some View {
-        ScrollView() {
-            VStack {
-                babyBasicInfo
-                Divider().frame(height: 1).padding(.horizontal, 30).background(Color.gray)
+        VStack(alignment: .leading) {
+            babyBasicInfo
+            Divider().frame(height: 1).padding(.horizontal, 30).background(Color.gray)
+            ScrollView() {
+                ForEach(viewModel.baby.babyevents) { babyevent in
+                   BabyEventItemView(babyEvent: babyevent)
+                }
             }
-            .padding()
-            .foregroundColor(Color.orange)
         }
+        .padding()
+        .foregroundColor(Color.orange)
     }
     
     var babyBasicInfo: some View {
@@ -21,6 +24,7 @@ struct BabyTrackView: View {
                 Circle().frame(width: 100, height: 100)
                 Text(viewModel.baby.name).foregroundColor(Color.white)
             }
+            .frame(alignment: .topLeading)
             Text("生日：\(birthday)")
         }
         
