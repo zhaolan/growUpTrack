@@ -7,9 +7,14 @@ struct BabyTrackView: View {
         VStack(alignment: .leading) {
             babyBasicInfo
             Divider().frame(height: 1).padding(.horizontal, 30).background(Color.gray)
-            ScrollView() {
-                ForEach(viewModel.baby.babyevents) { babyevent in
-                   BabyEventItemView(babyEvent: babyevent)
+            
+            if (viewModel.baby.babyevents.isEmpty) {
+                Text("宝宝目前没有活动记录")
+            } else {
+                ScrollView() {
+                    ForEach(viewModel.baby.babyevents) { babyevent in
+                       BabyEventItemView(babyEvent: babyevent)
+                    }
                 }
             }
         }
